@@ -1,0 +1,1 @@
+print("Python installed and work correctly")
