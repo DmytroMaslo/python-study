@@ -1,21 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.8.10 on linux)" generated="20230116 12:56:22.882" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.1 (Python 3.8.10 on linux)" generated="20230116 14:51:06.519" rpa="false" schemaversion="3">
 <suite id="s1" name="First Test" source="/home/cryzalis/study_projects/python-study/test_cases/first_test.robot">
 <test id="s1-t1" name="Test1" line="6">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<msg timestamp="20230116 14:51:08.350" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20230116 14:51:08.340" endtime="20230116 14:51:16.061"/>
+</kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>https://google.com</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230116 12:56:23.777" level="INFO">Opening browser 'firefox' to base url 'https://google.com'.</msg>
-<msg timestamp="20230116 12:56:23.784" level="INFO">Firefox driver log is always forced to to: /home/cryzalis/study_projects/python-study/geckodriver-6.log</msg>
-<status status="PASS" starttime="20230116 12:56:23.765" endtime="20230116 12:56:55.585"/>
+<msg timestamp="20230116 14:51:16.068" level="INFO">Opening browser 'firefox' to base url 'https://google.com'.</msg>
+<msg timestamp="20230116 14:51:16.168" level="INFO">Firefox driver log is always forced to to: /home/cryzalis/study_projects/python-study/geckodriver-1.log</msg>
+<status status="PASS" starttime="20230116 14:51:16.064" endtime="20230116 14:51:55.776"/>
 </kw>
 <kw name="Close All Browsers" library="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" starttime="20230116 12:56:55.592" endtime="20230116 12:57:01.606"/>
+<status status="PASS" starttime="20230116 14:51:55.787" endtime="20230116 14:51:58.286"/>
 </kw>
-<status status="PASS" starttime="20230116 12:56:23.759" endtime="20230116 12:57:01.609"/>
+<status status="PASS" starttime="20230116 14:51:08.334" endtime="20230116 14:51:58.289"/>
 </test>
-<status status="PASS" starttime="20230116 12:56:22.930" endtime="20230116 12:57:01.641"/>
+<status status="PASS" starttime="20230116 14:51:06.577" endtime="20230116 14:51:58.296"/>
 </suite>
 <statistics>
 <total>
