@@ -1,5 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
+Variables    ../resources/PageObject/Locators/LoginPage.py
 
 *** Variables ***
 ${URL}    https://www.saucedemo.com/
@@ -9,8 +10,8 @@ ${Browser}    Chrome
 Test1
     Open Browser    ${URL}    ${Browser}
     Maximize Browser Window
-    Input Text    id:user-name    standard_user
-    Input Text    id:password    secret_sauce
-    Click Button    id:login-button
+    Input Text    ${InputUsername}    standard_user
+    Input Text    ${InputPassword}    secret_sauce
+    Click Button    ${SubmitButton}
     Sleep    3
     Close Browser
