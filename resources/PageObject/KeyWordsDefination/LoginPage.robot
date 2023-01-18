@@ -12,3 +12,6 @@ Input Password
 
 Click Login
     Click Element  ${SubmitButton}
+
+Clear Login
+    Clear Element Text    ${InputUsername}
