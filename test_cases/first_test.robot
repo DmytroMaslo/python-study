@@ -1,8 +1,10 @@
 *** Settings ***
 Library    SeleniumLibrary
+
+Variables    ../resources/users.py
 Variables    ../resources/PageObject/Locators/LoginPage.py
 Variables    ../resources/data.py
-Variables    ../resources/TestData/users.py
+
 Resource    ../resources/PageObject/KeyWordsDefination/LoginPage.robot
 Resource    ../resources/PageObject/KeyWordsDefination/Page.robot
 
