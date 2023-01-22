@@ -2,17 +2,20 @@
 Library    SeleniumLibrary
 Variables    ../resources/PageObject/Locators/LoginPage.py
 Variables    ../resources/data.py
+Variables    ../resources/TestData/users.py
 Resource    ../resources/PageObject/KeyWordsDefination/LoginPage.robot
 Resource    ../resources/PageObject/KeyWordsDefination/Page.robot
 
-
 *** Test Cases ***
-Test1
-    Open browser and Maximize
-    Input Username
-    Clear Login
-    Sleep    2
-    Input Password
-    Click Login
-    Sleep    3
+Login to site(positive)
+    Open browser and Maximize    ${URL}    ${Browser}
+    Login saucedemo    ${TestUsername}    ${TestPassword}
+    Page Should Not Contain Element    ${ErrorContainer}
+    Sleep    1
+    Go Back
+
+Login to site(negative)
+    Login saucedemo    ${LockedUser}    ${TestPassword}
+    Page Should Contain Element   ${ErrorContainer}
+    Sleep    1
     Close Browser
