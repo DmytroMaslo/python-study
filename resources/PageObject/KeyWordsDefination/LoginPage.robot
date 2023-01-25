@@ -1,17 +1,14 @@
 *** Settings ***
 Library  SeleniumLibrary
 Variables  ../Locators/LoginPage.py
-Variables  ../TestData/Testdata.py
 
 *** Keywords ***
-Input Username
-    Input Text  ${InputUsername}  ${TestUsername}
+Login saucedemo
+    [Arguments]    ${Username}  ${Password} 
+    Input Text    ${InputUsername}  ${Username}
+    Input Text    ${InputPassword}  ${Password}
+    Click Element    ${SubmitButton}
 
-Input Password
-    Input Text  ${InputPassword}  ${TestPassword}
-
-Click Login
-    Click Element  ${SubmitButton}
-
+    
 Clear Login
     Clear Element Text    ${InputUsername}

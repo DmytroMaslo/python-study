@@ -1,0 +1,1 @@
+FooterCopy = "class:footer_copy"

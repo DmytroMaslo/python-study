@@ -1,0 +1,1 @@
+InventoryFooter = 'Terms of Service'
