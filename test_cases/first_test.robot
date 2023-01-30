@@ -18,6 +18,7 @@ Login to site(negative)
     [Teardown]    Close Browser
     Login saucedemo    ${LockedUser}    ${TestPassword}
     Page Should Contain Element   ${ErrorContainer}
+    Capture Page Screenshot
 
 Login to site(negative)
     Open browser and Maximize    ${URL}    ${Browser}
@@ -28,6 +29,7 @@ Login to site(positive)
     Login saucedemo    ${TestUsername}    ${TestPassword}
     Page Should Not Contain Element    ${ErrorContainer}
     Element Should Contain    ${FooterCopy}    ${InventoryFooter}
+    Wait Until Element Is Visible    ${ProductFive}
 Buy Backpack
     Click buy backpack
     Click Container
