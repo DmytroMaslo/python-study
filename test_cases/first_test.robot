@@ -14,6 +14,12 @@ Resource    ../resources/PageObject/KeyWordsDefination/MainPage.robot
 *** Test Cases ***
 
 Login to site(negative)
+    [Setup]    Open browser and Maximize    ${URL}    ${Browser}
+    [Teardown]    Close Browser
+    Login saucedemo    ${LockedUser}    ${TestPassword}
+    Page Should Contain Element   ${ErrorContainer}
+
+Login to site(negative)
     Open browser and Maximize    ${URL}    ${Browser}
     Login saucedemo    ${LockedUser}    ${TestPassword}
     Page Should Contain Element   ${ErrorContainer}

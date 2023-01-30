@@ -8,3 +8,4 @@ Open browser and Maximize
     Maximize Browser Window
     log    Starting test with ${Browser}
     Log    Test URL: ${URL}
+
