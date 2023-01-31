@@ -29,7 +29,9 @@ Login to site(positive)
     Login saucedemo    ${TestUsername}    ${TestPassword}
     Page Should Not Contain Element    ${ErrorContainer}
     Element Should Contain    ${FooterCopy}    ${InventoryFooter}
+    Location Should Be    ${URL_after_login}
     Wait Until Element Is Visible    ${ProductFive}
+
 Buy Backpack
     Click buy backpack
     Click Container
